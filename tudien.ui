@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TuDienWidget</class>
+ <widget class="QWidget" name="TuDienWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>494</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tra cứu Từ điển</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLineEdit" name="input_tim_kiem">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+border-radius: 10px;
+border: 1px solid #cccccc;
+}
+QLineEdit:hover {
+    background-color: #f5f5f5; /* Nền chuyển sang xám cực nhạt */
+    border: 1px solid #b3b3b3; /* Viền đậm lên một chút xíu */
+}
+QLineEdit:pressed {
+    background-color: #e0e0e0; /* Nền xám rõ hơn khi bấm */
+    border: 1px solid #999999;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Tra từ: jisho, 辞書, từ điển, tu dien</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="chi_tiet">
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Nội dung chi tiết của từ sẽ hiển thị ở đây (Nghĩa, Kanji, Ví dụ...)</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <widget class="QListWidget" name="goi_y">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>55</y>
+     <width>582</width>
+     <height>212</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="cursor" stdset="0">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string>QListWidget { 
+	border: 1px solid #aaa; 
+	background-color: white; 
+	border-radius: 4px;
+	outline: none;
+}
+QListWidget::item {
+	padding: 8px;
+	border-bottom: 1px solid #eee;
+}
+QListWidget::item:hover {
+	background-color: #f0f8ff;
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

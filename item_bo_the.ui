@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>997</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Anki Clone</string>
+  </property>
+  <property name="styleSheet">
+   <string>QWidget#Form { background-color: #f5f5f5; }</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>20</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_top">
+     <item>
+      <spacer name="horizontalSpacer_left">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QFrame" name="thanh_menu">
+       <property name="minimumSize">
+        <size>
+         <width>338</width>
+         <height>43</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>338</width>
+         <height>43</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame { background-color: white; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-bottom: 2px solid #e0e0e0; border-right: 1px solid #e0e0e0; }</string>
+       </property>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: transparent; border: none; padding: 8px 15px; font-weight: bold; color: black; font-size: 14px; } QPushButton:hover { background-color: #f0f0f0; border-radius: 5px; } QPushButton:pressed { background-color: #e0e0e0; }</string>
+        </property>
+        <property name="text">
+         <string>Bộ thẻ</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_Duyet">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>0</y>
+          <width>81</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: transparent; border: none; padding: 8px 15px; font-weight: bold; color: black; font-size: 14px; } QPushButton:hover { background-color: #f0f0f0; border-radius: 5px; } QPushButton:pressed { background-color: #e0e0e0; }</string>
+        </property>
+        <property name="text">
+         <string>Duyệt</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>0</y>
+          <width>101</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: transparent; border: none; padding: 8px 15px; font-weight: bold; color: black; font-size: 14px; } 
+
+QPushButton:hover { background-color: #f0f0f0; border-radius: 5px; }
+
+ QPushButton:pressed { background-color: #e0e0e0; }</string>
+        </property>
+        <property name="text">
+         <string>Thống kê</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>0</y>
+          <width>75</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: transparent; border: none; padding: 8px 15px; font-weight: bold; color: black; font-size: 14px; } QPushButton:hover { background-color: #f0f0f0; border-radius: 5px; } QPushButton:pressed { background-color: #e0e0e0; }</string>
+        </property>
+        <property name="text">
+         <string>Thêm</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_right">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_DanhSach">
+      <layout class="QHBoxLayout" name="horizontalLayout_center">
+       <item>
+        <spacer name="horizontalSpacer_center_left">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QFrame" name="center">
+         <property name="minimumSize">
+          <size>
+           <width>750</width>
+           <height>500</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#center { background-color: white; border-radius: 15px; border: 1px solid #e0e0e0; }</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="leftMargin">
+           <number>30</number>
+          </property>
+          <property name="topMargin">
+           <number>30</number>
+          </property>
+          <property name="rightMargin">
+           <number>30</number>
+          </property>
+          <property name="bottomMargin">
+           <number>30</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="hang_muc">
+            <property name="styleSheet">
+             <string>QFrame { border-bottom: 1px solid #ddd; }</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="5,1,1,1,0">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_BoThe">
+               <property name="font">
+                <font>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Bộ thẻ</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_Moi">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Mới</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_Hoc">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Học</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_DenHan">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Đến hạn</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_header_icon">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>30</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>688</width>
+               <height>459</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3"/>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_ThongKeHomNay">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
+              <italic>true</italic>
+              <bold>false</bold>
+              <underline>false</underline>
+              <strikeout>false</strikeout>
+              <stylestrategy>PreferDefault</stylestrategy>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="tabletTracking">
+             <bool>false</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>Đã học...........</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_center_right">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_HocBai">
+      <widget class="QLabel" name="lbl_TongQuan_TenBoThe">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>60</y>
+         <width>341</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>180</y>
+         <width>154</width>
+         <height>109</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Mới:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Học:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Đến hạn:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_2">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="lbl_TongQuan_SoMoi">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Nu</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lbl_TongQuan_SoHoc">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Nu</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lbl_TongQuan_SoDenHan">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Nu</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="btn_HocBayGio">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>210</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #2563eb; 
+    color: white;             
+    font-weight: bold;        
+    font-size: 16px;           
+    border-radius: 20px;       
+    padding: 10px 30px;       
+    border: none;           
+}
+
+QPushButton:hover {
+    background-color: #3b82f6; 
+border-radius: 20px;   
+}
+
+QPushButton:pressed {
+    background-color: #60a5fa; 
+}</string>
+       </property>
+       <property name="text">
+        <string>Học bây giờ</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="khung_hoc_bai">
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>350</y>
+         <width>1021</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="txt_NoiDungThe">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>60</y>
+         <width>341</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_HienDapAn">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>450</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Trạng thái mặc định */
+QPushButton {
+    background-color: #ffffff; /* Nền trắng */
+    color: #444444;            /* Chữ màu xanh đen đậm */
+    font-size: 15px;           /* Cỡ chữ */
+    padding: 8px 25px;         /* Khoảng cách chữ đến viền */
+    
+    /* Bo góc và Viền */
+    border-radius: 18px;       /* MẸO: Nhớ chỉnh số này bằng đúng 1/2 Chiều cao (Height) của nút nhé */
+    border: 1px solid #cccccc; /* Viền màu xám nhạt */
+}
+
+/* Trạng thái khi chuột chạm lướt (Hover) */
+QPushButton:hover {
+    background-color: #f5f5f5; /* Nền chuyển sang xám cực nhạt */
+    border: 1px solid #b3b3b3; /* Viền đậm lên một chút xíu */
+}
+
+/* Trạng thái khi click bấm giữ (Pressed) */
+QPushButton:pressed {
+    background-color: #e0e0e0; /* Nền xám rõ hơn khi bấm */
+    border: 1px solid #999999;
+}</string>
+       </property>
+       <property name="text">
+        <string>Hiện đáp án</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="frame_DanhGia" native="true">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>430</y>
+         <width>631</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <widget class="QFrame" name="frame_5">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>0</y>
+          <width>591</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="nhohon1">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>10</y>
+           <width>88</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="nhohon10">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>10</y>
+           <width>88</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ngay1">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>10</y>
+           <width>88</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ngay3">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>10</y>
+           <width>88</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>594</width>
+          <height>56</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="btn_Lai">
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Trạng thái mặc định */
+QPushButton {
+    background-color: #ffffff; /* Nền trắng */
+    color: #444444;            /* Chữ màu xanh đen đậm */
+    font-size: 15px;           /* Cỡ chữ */
+    padding: 8px 25px;         /* Khoảng cách chữ đến viền */
+    
+    /* Bo góc và Viền */
+    border-radius: 18px;       /* MẸO: Nhớ chỉnh số này bằng đúng 1/2 Chiều cao (Height) của nút nhé */
+    border: 1px solid #cccccc; /* Viền màu xám nhạt */
+}
+
+/* Trạng thái khi chuột chạm lướt (Hover) */
+QPushButton:hover {
+    background-color: #f5f5f5; /* Nền chuyển sang xám cực nhạt */
+    border: 1px solid #b3b3b3; /* Viền đậm lên một chút xíu */
+}
+
+/* Trạng thái khi click bấm giữ (Pressed) */
+QPushButton:pressed {
+    background-color: #e0e0e0; /* Nền xám rõ hơn khi bấm */
+    border: 1px solid #999999;
+}</string>
+           </property>
+           <property name="text">
+            <string>Lại</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_Kho">
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Trạng thái mặc định */
+QPushButton {
+    background-color: #ffffff; /* Nền trắng */
+    color: #444444;            /* Chữ màu xanh đen đậm */
+    font-size: 15px;           /* Cỡ chữ */
+    padding: 8px 25px;         /* Khoảng cách chữ đến viền */
+    
+    /* Bo góc và Viền */
+    border-radius: 18px;       /* MẸO: Nhớ chỉnh số này bằng đúng 1/2 Chiều cao (Height) của nút nhé */
+    border: 1px solid #cccccc; /* Viền màu xám nhạt */
+}
+
+/* Trạng thái khi chuột chạm lướt (Hover) */
+QPushButton:hover {
+    background-color: #f5f5f5; /* Nền chuyển sang xám cực nhạt */
+    border: 1px solid #b3b3b3; /* Viền đậm lên một chút xíu */
+}
+
+/* Trạng thái khi click bấm giữ (Pressed) */
+QPushButton:pressed {
+    background-color: #e0e0e0; /* Nền xám rõ hơn khi bấm */
+    border: 1px solid #999999;
+}</string>
+           </property>
+           <property name="text">
+            <string>Khó</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_Tot">
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Trạng thái mặc định */
+QPushButton {
+    background-color: #ffffff; /* Nền trắng */
+    color: #444444;            /* Chữ màu xanh đen đậm */
+    font-size: 15px;           /* Cỡ chữ */
+    padding: 8px 25px;         /* Khoảng cách chữ đến viền */
+    
+    /* Bo góc và Viền */
+    border-radius: 18px;       /* MẸO: Nhớ chỉnh số này bằng đúng 1/2 Chiều cao (Height) của nút nhé */
+    border: 1px solid #cccccc; /* Viền màu xám nhạt */
+}
+
+/* Trạng thái khi chuột chạm lướt (Hover) */
+QPushButton:hover {
+    background-color: #f5f5f5; /* Nền chuyển sang xám cực nhạt */
+    border: 1px solid #b3b3b3; /* Viền đậm lên một chút xíu */
+}
+
+/* Trạng thái khi click bấm giữ (Pressed) */
+QPushButton:pressed {
+    background-color: #e0e0e0; /* Nền xám rõ hơn khi bấm */
+    border: 1px solid #999999;
+}</string>
+           </property>
+           <property name="text">
+            <string>Được</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_De">
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Trạng thái mặc định */
+QPushButton {
+    background-color: #ffffff; /* Nền trắng */
+    color: #444444;            /* Chữ màu xanh đen đậm */
+    font-size: 15px;           /* Cỡ chữ */
+    padding: 8px 25px;         /* Khoảng cách chữ đến viền */
+    
+    /* Bo góc và Viền */
+    border-radius: 18px;       /* MẸO: Nhớ chỉnh số này bằng đúng 1/2 Chiều cao (Height) của nút nhé */
+    border: 1px solid #cccccc; /* Viền màu xám nhạt */
+}
+
+/* Trạng thái khi chuột chạm lướt (Hover) */
+QPushButton:hover {
+    background-color: #f5f5f5; /* Nền chuyển sang xám cực nhạt */
+    border: 1px solid #b3b3b3; /* Viền đậm lên một chút xíu */
+}
+
+/* Trạng thái khi click bấm giữ (Pressed) */
+QPushButton:pressed {
+    background-color: #e0e0e0; /* Nền xám rõ hơn khi bấm */
+    border: 1px solid #999999;
+}</string>
+           </property>
+           <property name="text">
+            <string>Dễ</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>370</y>
+         <width>183</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="lbl_Hoc_Moi">
+          <property name="styleSheet">
+           <string notr="true">color: #085b9a</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="dau_cong_1">
+          <property name="text">
+           <string>+</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lbl_Hoc_DangHoc">
+          <property name="styleSheet">
+           <string notr="true">color: #ff0004</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="dau_cong_2">
+          <property name="text">
+           <string>+</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lbl_Hoc_CanOn">
+          <property name="styleSheet">
+           <string notr="true">color: #007413</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page">
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>230</y>
+         <width>711</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Bạn đã học xong bộ flashcards</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
