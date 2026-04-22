@@ -469,6 +469,10 @@ class AnkiApp(QtWidgets.QWidget):
     # PHẦN GIAO DIỆN CHUNG & THÊM THẺ
     # ====================================================
     def mo_man_hinh_chinh(self):
+        # FIX BUG Ở ĐÂY: Bắt buộc App phải dọn dẹp và đếm lại số liệu mới nhất
+        self.tai_du_lieu_len_man_hinh_chinh()
+
+        # Sau đó mới lật sang Trang 0 (Màn hình chính)
         self.stackedWidget.setCurrentIndex(0)
 
     def xu_ly_doi_ten(self, deck_id, old_name):
