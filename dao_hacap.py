@@ -139,14 +139,26 @@ class NoteDAO:
         data = JsonDBManager.load_data()
         decks_dict = {d["id"]: d["name"] for d in data["decks"]}
 
+        # 1. Quét kho Cards: Đếm xem mỗi Note (nid) đang có bao nhiêu thẻ (Card)
+        note_card_count = {}
+        for c in data["cards"]:
+            nid = c["nid"]
+            note_card_count[nid] = note_card_count.get(nid, 0) + 1
+
         results = []
         for n in data["notes"]:
             if deck_id is None or n["did"] == deck_id:
+
+                # 2. Suy luận loại thẻ: 2 thẻ = Đảo mặt, 1 thẻ = Cơ bản
+                so_luong_the = note_card_count.get(n["id"], 0)
+                loai_the_string = "Cơ bản (Đảo mặt)" if so_luong_the == 2 else "Cơ bản"
+
                 results.append({
                     "id": n["id"],
                     "front": n["front"],
                     "back": n["back"],
-                    "deck_name": decks_dict.get(n["did"], "Unknown")
+                    "deck_name": decks_dict.get(n["did"], "Unknown"),
+                    "loai_the": loai_the_string  # Ném thẳng chuỗi chữ này lên giao diện
                 })
         return results
 

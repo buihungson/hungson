@@ -441,7 +441,7 @@ QPushButton:hover { background-color: #f0f0f0; border-radius: 5px; }
               </font>
              </property>
              <property name="text">
-              <string>Học:</string>
+              <string>Đang học:</string>
              </property>
             </widget>
            </item>
@@ -636,9 +636,9 @@ QPushButton:pressed {
       <widget class="QWidget" name="frame_DanhGia" native="true">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>100</x>
          <y>430</y>
-         <width>631</width>
+         <width>721</width>
          <height>111</height>
         </rect>
        </property>
@@ -647,7 +647,7 @@ QPushButton:pressed {
          <rect>
           <x>30</x>
           <y>0</y>
-          <width>591</width>
+          <width>691</width>
           <height>44</height>
          </rect>
         </property>
@@ -657,97 +657,13 @@ QPushButton:pressed {
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="nhohon1">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>10</y>
-           <width>88</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>15</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="nhohon10">
-         <property name="geometry">
-          <rect>
-           <x>170</x>
-           <y>10</y>
-           <width>88</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>15</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="ngay1">
-         <property name="geometry">
-          <rect>
-           <x>320</x>
-           <y>10</y>
-           <width>88</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>15</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QLabel" name="ngay3">
-         <property name="geometry">
-          <rect>
-           <x>460</x>
-           <y>10</y>
-           <width>88</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>15</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
        </widget>
        <widget class="QFrame" name="frame_4">
         <property name="geometry">
          <rect>
           <x>20</x>
           <y>50</y>
-          <width>594</width>
+          <width>701</width>
           <height>56</height>
          </rect>
         </property>

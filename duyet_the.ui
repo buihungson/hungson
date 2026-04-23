@@ -66,7 +66,7 @@ QLineEdit:focus {
         <widget class="QListWidget" name="list_BoThe">
          <item>
           <property name="text">
-           <string>Tất cả các thẻ</string>
+           <string>Tất cả bộ thẻ</string>
           </property>
          </item>
         </widget>
@@ -220,6 +220,23 @@ QTextEdit:focus {
         </widget>
        </item>
        <item>
+        <widget class="QLabel" name="lbl_LoaiThe">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::CustomContextMenu</enum>
+         </property>
+         <property name="text">
+          <string>Loại thẻ</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -242,6 +259,19 @@ QTextEdit:focus {
          </property>
          <property name="text">
           <string>Lưu Thay Đổi</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_XoaThe">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string>background-color: #2563eb; color: white; border-radius: 5px; padding: 8px; font-weight: bold;</string>
+         </property>
+         <property name="text">
+          <string>Xóa Thẻ</string>
          </property>
         </widget>
        </item>
